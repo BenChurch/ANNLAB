@@ -3,34 +3,37 @@
 
 #include "ANNLAB.h"
 
+using namespace std;
+
 class Catalogue
 {
-public:
-    // Basic constructors and destructor
-    //---------------------------------------------------------
-    // Constructor
-    Catalogue();
-    Catalogue(vector<string> Entries);
 
-    // Destructor
-    ~Catalogue();
+    public:
+        // Basic constructors and destructor
+        //---------------------------------------------------------
+        // Constructor
+        Catalogue();
+       Catalogue(vector<const char *> Entries);
 
-    // Copy constuctor
-    Catalogue(const Catalogue& OriginalCatalogue);
+        // Destructor
+        ~Catalogue();
 
-    // Copy assignment operation
-    Catalogue& operator= (const Catalogue&);
+        // Copy constuctor
+        Catalogue(const Catalogue& OriginalCatalogue);
 
-    // Move constructor
-    Catalogue (Catalogue&& OriginalCatalogue); // Return relevant copies and delete originals
+        // Copy assignment operation
+        Catalogue& operator= (const Catalogue&);
 
-    // Move assignment operation
-    Catalogue& operator= (Catalogue& );      // Return relevant copies and delete originals
-    //---------------------------------------------------------
+        // Move constructor
+        Catalogue (Catalogue&& OriginalCatalogue); // Return relevant copies and delete originals
 
-    vector<string> Entries;                 // A list of the names of things in the catalogue
-    vector<vector<string>::iterator> Index; // Vectors of iterators, each of which will point to the beginning of each string element
-    string GetEntry(int Index);
+        // Move assignment operation
+        Catalogue& operator= (Catalogue& );      // Return relevant copies and delete originals
+        //---------------------------------------------------------
+
+        vector<string> Entries;                 // A list of the names of things in the catalogue
+        vector<vector<string>::iterator> Index; // Vectors of iterators, each of which will point to the beginning of each string element
+        string GetEntry(int Index);
 
 
 };

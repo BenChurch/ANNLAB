@@ -7,14 +7,13 @@
 #include <strings.h>
 #include <math.h>
 
-#include "Node.h"
-#include "NeuralNet.h"
+//#include "Node.h"
+//#include "NeuralNet.h"
+//#include "Catalogue.h"
 
 using namespace std;
 
-NeuralNet ActiveNeuralNet;                      // Currently selected neural network
 
-void InputAndSetFeedforwardNetworkParameters();
 
 #endif // ANNLAB_H
 

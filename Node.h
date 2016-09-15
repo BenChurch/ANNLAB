@@ -5,6 +5,8 @@
 #include "NodeActivationFunction.h"
 #include "NodeActivationState.h"
 
+using namespace std;
+
 class Node
 {
 public:
@@ -13,7 +15,7 @@ public:
     //------------------------------------------------------
     // Constructor
     Node();
-    Node(string NodeType, NodeActivationFunction ActivationFunction, int NumberOfInputs, int NumberOfOutputs);
+    Node(NodeActivationFunction * NewActivationFunction, int NumberOfInputs, int NumberOfOutputs);
 
     // Destructor
     ~Node();
@@ -34,23 +36,21 @@ public:
     // Lists node types to which this->NodeType can be set
     void PrintAvailibleNodeTypes();
 
-    // Returns string stating the current NodeType
-    // TODO make sure this can handle an uninitialized NodeType
-    string GetNodeType();
-
-    void SetNodeType(const char * NewNodeType);
-
-    void AddInputConnection(Node ConnectingNode);
-    void RemoveInputConnection(Node DisconnectingNode);
+    //void AddInputConnection(Node ConnectingNode);
+    //void RemoveInputConnection(Node DisconnectingNode);
+    vector<double> Connections;
+    float NodeValue = 0;
+    float NodeThreshold = 1;        // 1 for now, try to come up with XOR network
+    NodeActivationFunction ActivationFunction;
 
 protected:
-    vector<const char *> NodeTypeCatalogue = {"Input", "Hidden", "Output"};
-    string NodeType;
+//    vector<const char *> NodeTypeCatalogue = {"Input", "Hidden", "Output"};
+//    string NodeType;
     int NumberOfInputs = 0;
     int NumberOfOutputs = 0;
-    float NodeResponse = 0;
-    NodeActivationFunction ActivationFunction;
-    NodeActivationState ActivationState;
+
+    //NodeActivationFunction ActivationFunction;
+    //NodeActivationState ActivationState;
 
 };
 

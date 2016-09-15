@@ -1,6 +1,7 @@
 #ifndef TANHFUNCTION_H
 #define TANHFUNCTION_H
 
+#include "NodeActivationFunction.h"
 
 class TanHFunction : public NodeActivationFunction
 {
@@ -18,7 +19,7 @@ class TanHFunction : public NodeActivationFunction
         TanHFunction(const TanHFunction& OriginalTanH);
 
         // Copy assignment operator
-        TanHFunction& operator= (const TanHFunction&);
+        TanHFunction& operator = (const TanHFunction&);
 
         // Move constructor
         TanHFunction (TanHFunction&& OriginalTanH);
@@ -27,7 +28,7 @@ class TanHFunction : public NodeActivationFunction
         TanHFunction& operator= (TanHFunction&);
         //-----------------------------------------------
 
-        float GetFunctionOutput(double Input);
+        double GetFunctionOutput(double Input);
 
 };
 

@@ -1,4 +1,5 @@
 #include "NodeActivationFunction.h"
+#include "ANNLAB.h"
 
 // Basic constructors and destructors
 //----------------------------------------------------------------------------------------
@@ -17,9 +18,9 @@ NodeActivationFunction::NodeActivationFunction(const NodeActivationFunction& Ori
 
 }
 
-NodeActivationFunction& NodeActivationFunction::operator= (const NodeActivationFunction&)
+NodeActivationFunction& NodeActivationFunction::operator= (const NodeActivationFunction& OriginalActivationFunction)
 {
-
+    //this = * OriginalActivationFunction;
 }
 
 NodeActivationFunction::NodeActivationFunction(NodeActivationFunction&& OriginalActivationFunction)
@@ -33,21 +34,21 @@ NodeActivationFunction& NodeActivationFunction::operator= (NodeActivationFunctio
 }
 //----------------------------------------------------------------------------------------
 
-void NodeActivationFunction::PrintAvailibleFunctions()
-{
-    for(uint it = 0; it++; it != this->FunctionCatalogue.size())
-    {
-        cout << this->FunctionCatalogue[it] << endl;
-    }
-}
+//void NodeActivationFunction::PrintAvailibleFunctions()
+//{
+//    for(uint it = 0; it++; it != this->FunctionCatalogue.size())
+//    {
+//        cout << this->FunctionCatalogue[it] << endl;
+//    }
+//}
 
-const char * NodeActivationFunction::GetFunctionVariety()
-{
-    return this->FunctionVatiety;
-}
+//NodeActivationFunction NodeActivationFunction::GetFunctionVariety()
+//{
+//    return this->FunctionVatiety;
+//}
 
-void NodeActivationFunction::SetFunctionVariety(const char * NewFunctionVariety)
-{
-    this->FunctionVatiety.clear();
-    this->FunctionVatiety = NewFunctionVariety;
-}
+//void NodeActivationFunction::SetFunctionVariety(const char * NewFunctionVariety)
+//{
+//    this->FunctionVatiety.clear();
+//    this->FunctionVatiety = NewFunctionVariety;
+//}

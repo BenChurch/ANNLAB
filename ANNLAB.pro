@@ -14,7 +14,11 @@ SOURCES += \
     Catalogue.cpp \
     ANNLAB.cpp \
     FeedforwardArchitecture.cpp \
-    InputLayer.cpp
+    NetworkInputLayer.cpp \
+    NetworkHiddenLayer.cpp \
+    NetworkOutputLayer.cpp \
+    NetworkArchitecture.cpp \
+    IdentityFunction.cpp
 
 HEADERS += \
     UserInterface.h \
@@ -27,5 +31,9 @@ HEADERS += \
     NodeActivationFunction.h \
     Catalogue.h \
     FeedforwardArchitecture.h \
-    InputLayer.h
+    NetworkInputLayer.h \
+    NetworkHiddenLayer.h \
+    NetworkOutputLayer.h \
+    NetworkArchitecture.h \
+    IdentityFunction.h
 

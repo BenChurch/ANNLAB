@@ -34,7 +34,8 @@ TanHFunction& TanHFunction::operator= (TanHFunction&)
 }
 //------------------------------------------------------------------
 
-float TanHFunction::GetFunctionOutput(double Input)
+double TanHFunction::GetFunctionOutput(double Input)
 {
     double Output = tanh(Input);
+    return Output;
 }

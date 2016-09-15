@@ -3,6 +3,8 @@
 
 #include "ANNLAB.h"
 
+using namespace std;
+
 class NodeActivationState
 {
 public:

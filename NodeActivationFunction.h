@@ -2,6 +2,13 @@
 #define NODEACTIVATIONFUNCTION_H
 
 #include "ANNLAB.h"
+#include "Catalogue.h"
+//#include "TanHFunction.h"
+//#include "IdentityFunction.h"
+
+using namespace std;
+
+//namespace NodeActivationFunctions{
 
 class NodeActivationFunction
 {
@@ -28,14 +35,15 @@ public:
     NodeActivationFunction& operator= (NodeActivationFunction&);
     //--------------------------------------------------------------------------
 
-    void PrintAvailibleFunctions();
-    const char * GetFunctionVariety();
-    void SetFunctionVariety(const char * NewFunctionVariety);
+    //void PrintAvailibleFunctions();
+    //const char * GetFunctionVariety();
+    //void SetFunctionVariety(const char * NewFunctionVariety);
 
 protected:
-    vector<string> FunctionCatalogue = {"TanH"};
-    const char * FunctionVatiety;                   // Whether the function be tanh, radial basis, identity, etc...
+    Catalogue SupportedActivationFunctions(vector<const char *> = {"TanH"});
+    //NodeActivationFunction FunctionVatiety;                   // Whether the function be tanh, radial basis, identity, etc...
 
 };
 
+//}
 #endif // ACTIVATIONFUNCTION_H

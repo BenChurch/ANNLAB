@@ -5,7 +5,7 @@ Catalogue::Catalogue()
 {
 
 }
-Catalogue::Catalogue(vector<string> Entries)
+Catalogue::Catalogue(vector<const char *> Entries)
 {
     for(int i = 0; i < Entries.size(); i++)
     {
